@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+
 import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Statistics from '../Statistics';
 import Notification from '../Message';
@@ -26,27 +27,7 @@ class Feedback extends Component {
     good: this.props.initialGood,
     neutral: this.props.initialNeutral,
     bad: this.props.initialBad,
-    // total: this.props.initialTotal,
-    // positivePercentage: this.props.initialPositivePercentage,
   };
-
-  // onClickGood = () => {
-  //   this.setState(prevState => ({
-  //     good: prevState.good + 1,
-  //   }));
-  // };
-
-  // onClickNeutral = () => {
-  //   this.setState(prevState => ({
-  //     neutral: prevState.neutral + 1,
-  //   }));
-  // };
-
-  // onClickBad = () => {
-  //   this.setState(prevState => ({
-  //     bad: prevState.bad + 1,
-  //   }));
-  // };
 
   countTotalFeedback = () =>
     this.state.good + this.state.bad + this.state.neutral;
@@ -73,11 +54,6 @@ class Feedback extends Component {
 
     return (
       <>
-        {/* <FeedbackOptions
-          onClickGood={this.onClickGood}
-          onClickNeutral={this.onClickNeutral}
-          onClickBad={this.onClickBad}
-        /> */}
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={objectKey}

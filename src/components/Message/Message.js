@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Message.css';
+
 const Notification = ({ message }) => (
   <>
-    <h2 className="">{message}</h2>
+    <h2 className="message__title">{message}</h2>
   </>
 );
 
